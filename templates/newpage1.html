@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>Hello, this is your random number (And a cat to cheer you up):</h1>
+<p>Your random number is: {{ random_number }}</p>
+<img src="{{ url_for('static', filename='Cat.jpg') }}" alt="A cat">
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% block title %}
+Fortune Teller
+{% endblock %} 
+{% block content %}
+<h1>Your Totally Accurate Fortune</h1>
+<button class="btn btn-primary" onclick="showFortune()">
+Reveal my fortune
+</button>
+<p id="fortune" class="mt-3"></p>
+
+<script>
+const fortunes = [
+    "You will find 1 million dollars in your car at some point in your life",
+    "There is a snake under your bed",
+    "A cat somewhere is thinking of you.",
+    "Your mom",
+    "Today is an excellent day to skip homework",
+];
+
+function showFortune() {
+    const index = Math.floor(Math.random() * fortunes.length);
+    document.getElementById("fortune").textContent = fortunes[index];
+}
+</script>
+{% endblock %}
